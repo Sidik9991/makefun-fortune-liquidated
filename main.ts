@@ -13,6 +13,8 @@
 // 20 words, no trailing newline.
 //
 // Pass 1: seven candidates (C1-C7). Pass 2 added three challengers (C8-C10).
+// Verified at runtime by the parent session 2026-11-25: winner "Already Spent",
+// 61 bytes / 61 chars, 11 words, 30/30, gate OK; output byte-identical to the winning line.
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname } from "node:path";
 
@@ -83,6 +85,28 @@ const CANDIDATES: Candidate[] = [
     line: "You will be rich again, in hindsight, which pays nothing and arrives daily.",
     scores: [1, 2, 2, 2, 2],
     why: "loss only implied (rich again = not rich now), no trader or loss named; warm and rueful; 13 words, one breath; 'pays nothing and arrives daily' is a fresh turn on hindsight; oracular opening broken by the punchline",
+  },
+  // Pass 2 challengers (C8-C10).
+  {
+    id: "C8",
+    title: "Bottom of the Wallet",
+    line: "You will find, at the bottom of your wallet, a joke worth more than the coins.",
+    scores: [2, 2, 2, 2, 2],
+    why: "wallet + coins, fortune voice; warm, the joke outvalues the loss; 16 words, one breath; the punchline is the joke itself, last word 'coins'; oracular opening broken by 'a joke'",
+  },
+  {
+    id: "C9",
+    title: "Funnier at Parties",
+    line: "You will rise again, slightly poorer and considerably funnier at parties.",
+    scores: [1, 2, 2, 2, 2],
+    why: "loss only implied (slightly poorer), no trader or trade named; warm, a gentle laugh; 11 words, one breath; money traded for humour, last word 'parties' surprises; oracular opening broken by the closer",
+  },
+  {
+    id: "C10",
+    title: "Late Stars",
+    line: "The stars say hold; your liquidation says the stars were late.",
+    scores: [2, 2, 2, 2, 2],
+    why: "liquidation named outright + hold/stars; rueful, the stars take the blame; 11 words, one breath; 'the stars were late' is a fresh turn, last word 'late'; oracular opening broken by the loss talking back",
   },
 ];
 
